@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE63800A240D772E0067A7B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638009240D772E0067A7B5 /* AppDelegate.swift */; };
+		AE63800C240D772E0067A7B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63800B240D772E0067A7B5 /* SceneDelegate.swift */; };
+		AE638011240D772E0067A7B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE63800F240D772E0067A7B5 /* Main.storyboard */; };
+		AE638014240D772E0067A7B5 /* Photo_De_Duping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE638012240D772E0067A7B5 /* Photo_De_Duping.xcdatamodeld */; };
+		AE638016240D77320067A7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE638015240D77320067A7B5 /* Assets.xcassets */; };
+		AE638019240D77320067A7B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE638017240D77320067A7B5 /* LaunchScreen.storyboard */; };
+		AE638021240D8E830067A7B5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638020240D8E830067A7B5 /* Photo.swift */; };
+		AE638029240DA3C50067A7B5 /* DePupingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638028240DA3C50067A7B5 /* DePupingViewController.swift */; };
+		AE63802B240DA4130067A7B5 /* DeDupingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63802A240DA4130067A7B5 /* DeDupingTableViewCell.swift */; };
+		AE63802D240DA45A0067A7B5 /* DeDupingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63802C240DA45A0067A7B5 /* DeDupingDetailViewController.swift */; };
+		AE63802F240DA4750067A7B5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63802E240DA4750067A7B5 /* AddViewController.swift */; };
+		AE638031240DA56A0067A7B5 /* DuplicateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638030240DA56A0067A7B5 /* DuplicateTableViewController.swift */; };
+		AE638033240DA58B0067A7B5 /* DuplicateDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638032240DA58B0067A7B5 /* DuplicateDetailTableViewController.swift */; };
+		AE638038240DA67A0067A7B5 /* DuplicateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638037240DA67A0067A7B5 /* DuplicateTableViewCell.swift */; };
+		AE63803A240DA69A0067A7B5 /* DuplicateDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE638039240DA69A0067A7B5 /* DuplicateDetailTableViewCell.swift */; };
+		AE63803F240ED4F30067A7B5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63803E240ED4F30067A7B5 /* Helper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE638006240D772E0067A7B5 /* Photo De-Duping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo De-Duping.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE638009240D772E0067A7B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE63800B240D772E0067A7B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE638010240D772E0067A7B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE638013240D772E0067A7B5 /* Photo_De_Duping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_De_Duping.xcdatamodel; sourceTree = "<group>"; };
+		AE638015240D77320067A7B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE638018240D77320067A7B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE63801A240D77320067A7B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE638020240D8E830067A7B5 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		AE638028240DA3C50067A7B5 /* DePupingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DePupingViewController.swift; sourceTree = "<group>"; };
+		AE63802A240DA4130067A7B5 /* DeDupingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeDupingTableViewCell.swift; sourceTree = "<group>"; };
+		AE63802C240DA45A0067A7B5 /* DeDupingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeDupingDetailViewController.swift; sourceTree = "<group>"; };
+		AE63802E240DA4750067A7B5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AE638030240DA56A0067A7B5 /* DuplicateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateTableViewController.swift; sourceTree = "<group>"; };
+		AE638032240DA58B0067A7B5 /* DuplicateDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateDetailTableViewController.swift; sourceTree = "<group>"; };
+		AE638037240DA67A0067A7B5 /* DuplicateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateTableViewCell.swift; sourceTree = "<group>"; };
+		AE638039240DA69A0067A7B5 /* DuplicateDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AE63803E240ED4F30067A7B5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE638003240D772E0067A7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE637FFD240D772E0067A7B5 = {
+			isa = PBXGroup;
+			children = (
+				AE638008240D772E0067A7B5 /* Photo De-Duping */,
+				AE638007240D772E0067A7B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE638007240D772E0067A7B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE638006240D772E0067A7B5 /* Photo De-Duping.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE638008240D772E0067A7B5 /* Photo De-Duping */ = {
+			isa = PBXGroup;
+			children = (
+				AE638034240DA6050067A7B5 /* DDVC */,
+				AE638035240DA61E0067A7B5 /* DVC */,
+				AE638024240D8EA70067A7B5 /* Model and Controller */,
+				AE638025240D8EBB0067A7B5 /* Resources */,
+				AE638026240D8ED50067A7B5 /* StoryBoard */,
+				AE638027240D8EED0067A7B5 /* Other */,
+			);
+			path = "Photo De-Duping";
+			sourceTree = "<group>";
+		};
+		AE638024240D8EA70067A7B5 /* Model and Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE63803E240ED4F30067A7B5 /* Helper.swift */,
+				AE638020240D8E830067A7B5 /* Photo.swift */,
+			);
+			path = "Model and Controller";
+			sourceTree = "<group>";
+		};
+		AE638025240D8EBB0067A7B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE638009240D772E0067A7B5 /* AppDelegate.swift */,
+				AE63800B240D772E0067A7B5 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE638026240D8ED50067A7B5 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				AE63800F240D772E0067A7B5 /* Main.storyboard */,
+				AE638017240D77320067A7B5 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		AE638027240D8EED0067A7B5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AE63801A240D77320067A7B5 /* Info.plist */,
+				AE638015240D77320067A7B5 /* Assets.xcassets */,
+				AE638012240D772E0067A7B5 /* Photo_De_Duping.xcdatamodeld */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AE638034240DA6050067A7B5 /* DDVC */ = {
+			isa = PBXGroup;
+			children = (
+				AE63802C240DA45A0067A7B5 /* DeDupingDetailViewController.swift */,
+				AE63802E240DA4750067A7B5 /* AddViewController.swift */,
+				AE638028240DA3C50067A7B5 /* DePupingViewController.swift */,
+				AE638036240DA6440067A7B5 /* Cell */,
+			);
+			path = DDVC;
+			sourceTree = "<group>";
+		};
+		AE638035240DA61E0067A7B5 /* DVC */ = {
+			isa = PBXGroup;
+			children = (
+				AE63803B240DA6AB0067A7B5 /* Cell */,
+				AE638030240DA56A0067A7B5 /* DuplicateTableViewController.swift */,
+				AE638032240DA58B0067A7B5 /* DuplicateDetailTableViewController.swift */,
+			);
+			path = DVC;
+			sourceTree = "<group>";
+		};
+		AE638036240DA6440067A7B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AE63802A240DA4130067A7B5 /* DeDupingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AE63803B240DA6AB0067A7B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AE638037240DA67A0067A7B5 /* DuplicateTableViewCell.swift */,
+				AE638039240DA69A0067A7B5 /* DuplicateDetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE638005240D772E0067A7B5 /* Photo De-Duping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE63801D240D77320067A7B5 /* Build configuration list for PBXNativeTarget "Photo De-Duping" */;
+			buildPhases = (
+				AE638002240D772E0067A7B5 /* Sources */,
+				AE638003240D772E0067A7B5 /* Frameworks */,
+				AE638004240D772E0067A7B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photo De-Duping";
+			productName = "Photo De-Duping";
+			productReference = AE638006240D772E0067A7B5 /* Photo De-Duping.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE637FFE240D772E0067A7B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Lydia Zhang";
+				TargetAttributes = {
+					AE638005240D772E0067A7B5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AE638001240D772E0067A7B5 /* Build configuration list for PBXProject "Photo De-Duping" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE637FFD240D772E0067A7B5;
+			productRefGroup = AE638007240D772E0067A7B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE638005240D772E0067A7B5 /* Photo De-Duping */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE638004240D772E0067A7B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE638019240D77320067A7B5 /* LaunchScreen.storyboard in Resources */,
+				AE638016240D77320067A7B5 /* Assets.xcassets in Resources */,
+				AE638011240D772E0067A7B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE638002240D772E0067A7B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE638021240D8E830067A7B5 /* Photo.swift in Sources */,
+				AE638038240DA67A0067A7B5 /* DuplicateTableViewCell.swift in Sources */,
+				AE63802D240DA45A0067A7B5 /* DeDupingDetailViewController.swift in Sources */,
+				AE638033240DA58B0067A7B5 /* DuplicateDetailTableViewController.swift in Sources */,
+				AE63802F240DA4750067A7B5 /* AddViewController.swift in Sources */,
+				AE638014240D772E0067A7B5 /* Photo_De_Duping.xcdatamodeld in Sources */,
+				AE63803A240DA69A0067A7B5 /* DuplicateDetailTableViewCell.swift in Sources */,
+				AE63800A240D772E0067A7B5 /* AppDelegate.swift in Sources */,
+				AE638031240DA56A0067A7B5 /* DuplicateTableViewController.swift in Sources */,
+				AE638029240DA3C50067A7B5 /* DePupingViewController.swift in Sources */,
+				AE63803F240ED4F30067A7B5 /* Helper.swift in Sources */,
+				AE63800C240D772E0067A7B5 /* SceneDelegate.swift in Sources */,
+				AE63802B240DA4130067A7B5 /* DeDupingTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE63800F240D772E0067A7B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE638010240D772E0067A7B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE638017240D77320067A7B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE638018240D77320067A7B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE63801B240D77320067A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE63801C240D77320067A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE63801E240D77320067A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Photo De-Duping/Other/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lydia.Photo-De-Duping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE63801F240D77320067A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Photo De-Duping/Other/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lydia.Photo-De-Duping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE638001240D772E0067A7B5 /* Build configuration list for PBXProject "Photo De-Duping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE63801B240D77320067A7B5 /* Debug */,
+				AE63801C240D77320067A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE63801D240D77320067A7B5 /* Build configuration list for PBXNativeTarget "Photo De-Duping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE63801E240D77320067A7B5 /* Debug */,
+				AE63801F240D77320067A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE638012240D772E0067A7B5 /* Photo_De_Duping.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE638013240D772E0067A7B5 /* Photo_De_Duping.xcdatamodel */,
+			);
+			currentVersion = AE638013240D772E0067A7B5 /* Photo_De_Duping.xcdatamodel */;
+			path = Photo_De_Duping.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AE637FFE240D772E0067A7B5 /* Project object */;
+}
