@@ -10,9 +10,10 @@ import UIKit
 
 class DeDupingDetailViewController: UIViewController {
     @IBOutlet weak var firstImage: UIImageView!
-
     @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var alike: UILabel!
     
+    var percentNumber = PhotoController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +22,21 @@ class DeDupingDetailViewController: UIViewController {
     }
     var image1: Photo?
     var image2: Photo?
+    var percentNum: String?
     
     func updateView() {
-        if let first_Image = image1 {
+        guard let first_Image = image1 else {return}
             firstImage.image = UIImage(data:first_Image.imageData)
-        }
-        if let second_Image = image2 {
+        
+        guard let second_Image = image2 else {return}
             secondImage.image = UIImage(data: second_Image.imageData)
+        
+        let returnNumber = percentNumber.hamming(image1: first_Image.imageData, image2: second_Image.imageData)
+        let resultNumber = Int(returnNumber!)
+        if resultNumber > 90 {
+            alike.text = "\(resultNumber)% identitcal, likely to be duplicated images."
+        } else {
+            alike.text = "\(resultNumber)% alike."
         }
     }
 

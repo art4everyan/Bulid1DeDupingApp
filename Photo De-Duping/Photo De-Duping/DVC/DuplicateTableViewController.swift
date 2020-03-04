@@ -11,52 +11,6 @@ import Photos
 
 class DuplicateTableViewController: UITableViewController {
     
-    func fetchPhotoFromAlbum() {
-        let albumName = "Album Name"
-        var assetCollection = PHAssetCollection()
-        var albumFound = Bool()
-        var photoAssets = PHFetchResult<AnyObject>()
-        let fetchOptions = PHFetchOptions()
-        
-        fetchOptions.predicate = NSPredicate(format: "title = %@", albumName)
-        let collection: PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
-        if let firstObject = collection.firstObject {
-            assetCollection = firstObject
-            albumFound = true
-        } else {
-            albumFound = false
-        }
-        _ = collection.count
-        photoAssets = PHAsset.fetchAssets(in: assetCollection, options: nil) as! PHFetchResult<AnyObject>
-        let imageManager = PHCachingImageManager()
-        photoAssets.enumerateObjects {(object: AnyObject!, count: Int, stop: UnsafeMutablePointer<ObjCBool>) in
-            if object is PHAsset   {
-               let asset = object as! PHAsset
-                print("Inside  If object is PHAsset, This is number 1")
-
-                let imageSize = CGSize(width: asset.pixelWidth,
-                                       height: asset.pixelHeight)
-
-
-                let options = PHImageRequestOptions()
-                options.deliveryMode = .fastFormat
-                options.isSynchronous = true
-
-                imageManager.requestImage(for: asset,
-                                                  targetSize: imageSize,
-                                                  contentMode: .aspectFill,
-                                                  options: options,
-                                                  resultHandler: {
-                                                    (image, info) -> Void in
-                                                    //self.photo = image!
-                                                    /* The image is now available to us */
-                                                    //self.addImgToArray(uploadImage: self.photo)
-                                                    print("enum for image, This is number 2")
-
-                })
-            }
-        }
-    }
     @IBAction func browse(_ sender: Any) {
     }
     

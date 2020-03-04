@@ -7,9 +7,8 @@
 //
 
 import Foundation
-struct Photo {
+struct Photo: Codable {
     var imageData : Data
-    //var address: String
 }
 extension Photo: Equatable {
     static func == (lhs: Photo,rhs: Photo) -> Bool {

@@ -76,24 +76,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF1-re-frQ">
-                                <rect key="frame" x="51.5" y="794" width="311" height="62"/>
-                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="30"/>
-                                <state key="normal" title="Find Duplicates In Album"/>
-                                <connections>
-                                    <segue destination="M7s-Jd-RIR" kind="show" identifier="DuplicateSegue" id="kjC-Xi-Vkt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QuQ-A5-ZSg" firstAttribute="bottom" secondItem="01H-kD-qoa" secondAttribute="bottom" constant="80" id="7hK-5R-uxl"/>
                             <constraint firstItem="SKV-o0-V6d" firstAttribute="top" secondItem="QuQ-A5-ZSg" secondAttribute="top" constant="10" id="As2-1h-Kr7"/>
                             <constraint firstItem="QuQ-A5-ZSg" firstAttribute="trailing" secondItem="01H-kD-qoa" secondAttribute="trailing" id="PwT-SQ-fNK"/>
-                            <constraint firstAttribute="bottom" secondItem="NF1-re-frQ" secondAttribute="bottom" constant="40" id="S61-DO-rr7"/>
                             <constraint firstItem="SKV-o0-V6d" firstAttribute="centerX" secondItem="dnR-Nh-1Ju" secondAttribute="centerX" id="bf9-6s-hFi"/>
                             <constraint firstItem="01H-kD-qoa" firstAttribute="leading" secondItem="QuQ-A5-ZSg" secondAttribute="leading" id="kqz-ju-R1r"/>
-                            <constraint firstItem="NF1-re-frQ" firstAttribute="centerX" secondItem="dnR-Nh-1Ju" secondAttribute="centerX" id="mBi-Ci-A74"/>
                             <constraint firstItem="01H-kD-qoa" firstAttribute="top" secondItem="SKV-o0-V6d" secondAttribute="bottom" constant="20" id="sFE-n2-A6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QuQ-A5-ZSg"/>
@@ -321,6 +311,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MCh-Zu-Yc8"/>
                     <connections>
+                        <outlet property="alike" destination="3a1-98-ncl" id="nOi-Qw-qw6"/>
                         <outlet property="firstImage" destination="tyQ-nP-GIU" id="a6M-OW-RUC"/>
                         <outlet property="secondImage" destination="Xws-8D-wfI" id="beT-0O-UCB"/>
                     </connections>

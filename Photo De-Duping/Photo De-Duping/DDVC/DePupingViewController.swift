@@ -33,12 +33,23 @@ class DePupingViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PercentOfAlike", for: indexPath) as? DeDupingTableViewCell else {return UITableViewCell()}
         let image1 = photoController.images1[indexPath.row]
         let image2 = photoController.images2[indexPath.row]
+        let percent = photoController.percent[indexPath.row]
         
         
         cell.photo1 = image1
         cell.photo2 = image2
+        cell.percentNum = percent
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            photoController.images1.remove(at: indexPath.row)
+            photoController.images2.remove(at: indexPath.row)
+            photoController.percent.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .bottom)
+        }
     }
     
     // MARK: - Navigation

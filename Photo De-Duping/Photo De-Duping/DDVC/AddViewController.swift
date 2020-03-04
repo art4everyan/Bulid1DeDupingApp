@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreGraphics
 
 class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -64,8 +63,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    
-    let x = image1?.imageData.withUnsafeBytes(<#T##body: (UnsafeRawBufferPointer) throws -> ResultType##(UnsafeRawBufferPointer) throws -> ResultType#>)
+        
     
     func updateViews() {
         guard let image1 = image1 else {return}
@@ -79,13 +77,8 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         guard let photoController = photoController,
             let firstImage = firstImage.image?.pngData(),
             let secondImage = secondImage.image?.pngData() else {return}
-        if let changeImage1 = image1 {
-            photoController.editImage1(photo: changeImage1, firstImage)
-        } else if let changeImage2 = image2 {
-            photoController.editImage2(photo: changeImage2, secondImage)
-        } else {
-            photoController.addImage(firstImage, secondImage)
-        }
+        
+        _ = photoController.addImage(firstImage, secondImage)
         navigationController?.popViewController(animated: true)
     }
     /*
