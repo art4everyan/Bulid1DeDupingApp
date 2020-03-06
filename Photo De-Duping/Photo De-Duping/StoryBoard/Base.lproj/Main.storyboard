@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,15 +77,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-gh-eU3">
+                                <rect key="frame" x="92.5" y="800" width="229" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Check Duplicates in Album"/>
+                                <connections>
+                                    <segue destination="M7s-Jd-RIR" kind="show" id="JIp-jR-D3I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QuQ-A5-ZSg" firstAttribute="bottom" secondItem="01H-kD-qoa" secondAttribute="bottom" constant="80" id="7hK-5R-uxl"/>
                             <constraint firstItem="SKV-o0-V6d" firstAttribute="top" secondItem="QuQ-A5-ZSg" secondAttribute="top" constant="10" id="As2-1h-Kr7"/>
+                            <constraint firstItem="QuQ-A5-ZSg" firstAttribute="bottom" secondItem="LLQ-gh-eU3" secondAttribute="bottom" constant="27" id="Omg-oO-1Ek"/>
                             <constraint firstItem="QuQ-A5-ZSg" firstAttribute="trailing" secondItem="01H-kD-qoa" secondAttribute="trailing" id="PwT-SQ-fNK"/>
                             <constraint firstItem="SKV-o0-V6d" firstAttribute="centerX" secondItem="dnR-Nh-1Ju" secondAttribute="centerX" id="bf9-6s-hFi"/>
                             <constraint firstItem="01H-kD-qoa" firstAttribute="leading" secondItem="QuQ-A5-ZSg" secondAttribute="leading" id="kqz-ju-R1r"/>
                             <constraint firstItem="01H-kD-qoa" firstAttribute="top" secondItem="SKV-o0-V6d" secondAttribute="bottom" constant="20" id="sFE-n2-A6C"/>
+                            <constraint firstItem="LLQ-gh-eU3" firstAttribute="centerX" secondItem="dnR-Nh-1Ju" secondAttribute="centerX" id="uPT-Gz-aix"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QuQ-A5-ZSg"/>
                     </view>
@@ -102,6 +113,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8s-cN-D7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1114.4927536231885" y="178.79464285714286"/>
+        </scene>
+        <!--Album Collection View Controller-->
+        <scene sceneID="nfM-8z-Ruq">
+            <objects>
+                <collectionViewController id="QuZ-IC-cv1" customClass="AlbumCollectionViewController" customModule="Photo_De_Duping" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k4c-CN-ul1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ofi-6t-bGs">
+                            <size key="itemSize" width="190" height="213"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="Jma-Wp-RSM" customClass="AlbumCollectionViewCell" customModule="Photo_De_Duping" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7A4-MY-blL">
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKg-FT-0WH">
+                                            <rect key="frame" x="54" y="89" width="82.5" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD9-Yu-eof">
+                                            <rect key="frame" x="68.5" y="180" width="53" height="30"/>
+                                            <state key="normal" title="Choose"/>
+                                            <connections>
+                                                <action selector="choose:" destination="Jma-Wp-RSM" eventType="touchUpInside" id="Jzz-Ex-bYf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UKg-FT-0WH" firstAttribute="centerX" secondItem="7A4-MY-blL" secondAttribute="centerX" id="4qj-NH-e4f"/>
+                                        <constraint firstItem="cD9-Yu-eof" firstAttribute="centerX" secondItem="7A4-MY-blL" secondAttribute="centerX" id="BaC-0z-2Uw"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UKg-FT-0WH" secondAttribute="trailing" id="GMw-67-ViH"/>
+                                        <constraint firstItem="UKg-FT-0WH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7A4-MY-blL" secondAttribute="leading" id="XJr-gr-VNo"/>
+                                        <constraint firstItem="UKg-FT-0WH" firstAttribute="centerY" secondItem="7A4-MY-blL" secondAttribute="centerY" id="lyG-n5-Ttn"/>
+                                        <constraint firstAttribute="bottom" secondItem="cD9-Yu-eof" secondAttribute="bottom" constant="10" id="rgl-Bk-HcD"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="190" height="220"/>
+                                <connections>
+                                    <outlet property="albumName" destination="UKg-FT-0WH" id="jtq-Ll-bPo"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="QuZ-IC-cv1" id="3dC-b5-jLP"/>
+                            <outlet property="delegate" destination="QuZ-IC-cv1" id="tuR-DF-Vlf"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hup-ii-els" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381.15942028985512" y="932.8125"/>
         </scene>
         <!--Duplicate Table View Controller-->
         <scene sceneID="kXG-Mb-9er">
@@ -153,7 +227,7 @@
                     <navigationItem key="navigationItem" id="ZXi-Ct-Fis">
                         <barButtonItem key="rightBarButtonItem" title="Browse Album" id="swh-wk-Jgw">
                             <connections>
-                                <action selector="browse:" destination="M7s-Jd-RIR" id="Au8-1U-qqb"/>
+                                <segue destination="QuZ-IC-cv1" kind="presentation" identifier="ChooseAlbumSegue" id="kQ6-57-qfI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -243,7 +317,7 @@
                                 <connections>
                                     <outlet property="image1" destination="ufA-FH-KSC" id="nD0-p2-dwh"/>
                                     <outlet property="image1NameLabel" destination="V4O-HP-Gxr" id="myQ-7G-diC"/>
-                                    <outlet property="image2" destination="re8-Os-Xwz" id="KlY-CW-ncq"/>
+                                    <outlet property="image2" destination="re8-Os-Xwz" id="1vj-p3-tma"/>
                                     <outlet property="image2NameLabel" destination="MXc-7R-Gdb" id="OPT-V5-NPh"/>
                                 </connections>
                             </tableViewCell>

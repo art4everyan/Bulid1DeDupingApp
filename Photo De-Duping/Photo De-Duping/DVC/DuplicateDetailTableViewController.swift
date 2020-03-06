@@ -9,38 +9,34 @@
 import UIKit
 
 class DuplicateDetailTableViewController: UITableViewController {
-
+    var cases: [Case] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cases.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DupliateDetail", for: indexPath) as? DuplicateDetailTableViewCell else {return UITableViewCell()}
 
-        // Configure the cell...
+        let duplicateOne = cases[indexPath.row].duplicateOne
+        let duplicateTwo = cases[indexPath.row].duplicateTwo
+        //let duplicateOneTitle = cases[indexPath.row].duplicateOneTitle
+        //let duplicatetwoTitle = cases[indexPath.row].duplicateTwoTitle
+        cell.photo1?.imageData = duplicateOne
+        cell.photo2?.imageData = duplicateTwo
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

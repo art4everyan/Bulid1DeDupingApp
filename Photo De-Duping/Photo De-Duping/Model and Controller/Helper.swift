@@ -7,6 +7,8 @@
 //
 import UIKit
 import Foundation
+import Photos
+
 class PhotoController {
     var images1: [Photo] = []
     var images2: [Photo] = []
@@ -97,3 +99,24 @@ class PhotoController {
     }
     
 }
+class AlbumController {
+    var album:[AlbumModel] = [AlbumModel]()
+    
+    func listAlbums() -> [AlbumModel] {
+
+        let options = PHFetchOptions()
+        let userAlbums = PHAssetCollection.fetchAssetCollections(with: PHAssetCollectionType.album, subtype: PHAssetCollectionSubtype.any, options: options)
+        userAlbums.enumerateObjects{ (object: AnyObject!, count: Int, stop: UnsafeMutablePointer) in
+        var assetCollection = PHAssetCollection()
+        let fetchOptions = PHFetchOptions()
+           fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+            fetchOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
+
+           let newAlbum = AlbumModel(name: assetCollection.localizedTitle!, count: assetCollection.estimatedAssetCount, collection:assetCollection)
+            self.album.append(newAlbum)
+         
+       }
+       return album
+     }
+}
+

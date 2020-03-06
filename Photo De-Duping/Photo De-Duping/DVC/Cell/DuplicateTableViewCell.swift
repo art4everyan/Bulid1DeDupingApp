@@ -7,10 +7,6 @@
 //
 
 import UIKit
-struct TrackHistory {
-    var order: Int
-    var numberOfDuplicateCase: Int
-}
 
 class DuplicateTableViewCell: UITableViewCell {
     @IBOutlet weak var number: UILabel!
@@ -26,12 +22,6 @@ class DuplicateTableViewCell: UITableViewCell {
         guard let tracker = tracker else {return}
         number.text = "\(tracker.order)"
         duplicateNumber.text = "\(tracker.numberOfDuplicateCase)"
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     

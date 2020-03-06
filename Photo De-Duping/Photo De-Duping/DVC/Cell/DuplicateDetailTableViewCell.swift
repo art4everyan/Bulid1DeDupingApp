@@ -14,6 +14,8 @@ class DuplicateDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image1NameLabel: UILabel!
     @IBOutlet weak var image2NameLabel: UILabel!
+    
+    
     var photo1: Photo? {
         didSet {
             updateViews()
@@ -31,12 +33,7 @@ class DuplicateDetailTableViewCell: UITableViewCell {
         image1.image = UIImage(data: photo1.imageData)
         image2.image = UIImage(data: photo2.imageData)
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-    
     @IBAction func image1Delete(_ sender: Any) {
     }
     @IBAction func image2Delete(_ sender: Any) {
